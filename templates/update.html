@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Data</title>
+</head>
+<body>
+    <h1>Edit Data</h1>
+    <form method="POST">
+        <label for="firstname">First Name:</label>
+        <input type="text" name="firstname" value="{{ data['firstname'] }}" required><br>
+        <label for="lastname">Last Name:</label>
+        <input type="text" name="lastname" value="{{ data['lastname'] }}" required><br>
+        <label for="height">Height:</label>
+        <input type="number" name="height" value="{{ data['height'] }}" required><br>
+        <label for="age">Age:</label>
+        <input type="number" name="age" value="{{ data['age'] }}" required><br>
+        <label for="address">Address:</label>
+        <input type="text" name="address" value="{{ data['address'] }}" required><br>
+        <input type="submit" value="Update">
+    </form>
+    <br>
+    <a href="/">Back to Main Page</a>
+</body>
+</html>

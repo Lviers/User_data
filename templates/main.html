@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD App - All Data</title>
+</head>
+<body>
+    <h1>CRUD App</h1>
+    <h2>All Data</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Height</th>
+            <th>Age</th>
+            <th>Address</th>
+            <th>Actions</th>
+        </tr>
+        {% for row in data %}
+            <tr>
+                <td>{{ row['id'] }}</td>
+                <td>{{ row['firstname'] }}</td>
+                <td>{{ row['lastname'] }}</td>
+                <td>{{ row['height'] }}</td>
+                <td>{{ row['age'] }}</td>
+                <td>{{ row['address'] }}</td>
+                <td>
+                    <a href="/update/{{ row['id'] }}">Edit</a>
+                    <a href="/delete/{{ row['id'] }}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/add">Add Data</a>
+</body>
+</html>
